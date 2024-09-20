@@ -4,6 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      href="./img/vecteezy_em-me-logo-design-template-vector-graphic-branding-element_5425371.jpg"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
     <title>Elisabetta photography</title>
   </head>
   <body>
@@ -11,16 +20,13 @@
       <div class="logo-container">
         <a href="#" class="logo">ELISABETTA</a>
         <p class="subtitle">Photography</p>
-      </div>
-      <div class="bx bx-menu" id="menu-icon">
-        <i class="fa-solid fa-bars"></i>
-      </div>
+
 
       <nav class="navbar">
         <ul class="links">
           <a href="#photos">Photos</a>
           <a href="#about">About Me</a>
-          <a href="#contact">Contact</a>
+          <a href="#footer">Contact</a>
         </ul>
       </nav>
     </header>
@@ -37,6 +43,47 @@
         <h1>Photos</h1>
         <p>Here are some of my favorite shots.</p>
       </div>
+      <div class="gallery">
+        <div class="gallery-item">
+          <img
+            src="img/IMG_8216-2.jpg"
+            alt="Portfolio Image 1"
+            class="gallery-img"
+          />
+        </div>
+        <div class="gallery-item">
+          <img
+            src="./img/img-24-4.JPG"
+            alt="Portfolio Image 2"
+            class="gallery-img"
+          />
+        </div>
+        <div class="gallery-item">
+          <img
+            src="img/img-22-22.jpg"
+            alt="Portfolio Image 3"
+            class="gallery-img"
+          />
+        </div>
+      </div>
+    </section>
+    <!-- <div id="lightbox" class="lightbox">
+      <span class="close">&times;</span>
+      <img class="lightbox-content" id="lightbox-image" />
+    </div> -->
+
+    <section class="carousel-section">
+      <h2>More Photos</h2>
+      <div class="carousel">
+        <div class="carousel-inner">
+          <img src="./img/img-22-22.jpg" alt="Image 1" />
+          <img src="./img/img-DSC_0116.jpg" alt="Image 2" />
+          <img src="./img/IMG_8216-2.jpg" alt="Image 3" />
+          <img src="./img/" alt="Image 4" />
+          <img src="./img/image5.jpg" alt="Image 5" />
+          <img src="./img/image6.jpg" alt="Image 6" />
+        </div>
+      </div>
     </section>
 
     <section class="about" id="about">
@@ -45,6 +92,45 @@
         <p>I'm elisabetta</p>
       </div>
     </section>
+
+    <footer class="footer" id="footer">
+        <div class="footer__container">
+          <div class="footer__logo-section">
+            <img
+              src="img/vecteezy_em-me-logo-design-template-vector-graphic-branding-element_5425371.jpg"
+              alt="Logo"
+              class="footer__logo"
+            />
+            <p class="footer__copyright">
+              &copy; Copyright by
+              <a class="footer__link twitter-link" target="_blank" href="#"
+                >Elisabetta Maragò</a
+              >. Don't claim as your own product.
+            </p>
+          </div>
+          <div class="footer__nav-section">
+            <ul class="footer__nav">
+              <li class="footer__item">
+                <a class="footer__link" href="#photos">Photos</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#about">About</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#footer">Contact</a>
+              </li>
+            </ul>
+            <div class="footer__contact">
+              <i class="bx bxs-envelope bx-flip-horizontal bx-tada"></i>
+              <a href="mailto:elisabetta998@hotmail.it">elisabetta998@hotmail.it</a>
+              <br />
+              <i class="bx bxl-instagram bx-flip-horizontal"></i>
+              <a href="https://www.instagram.com/elymiele/">elymiele</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+      
   </body>
   <script src="script.js"></script>
 </html>
