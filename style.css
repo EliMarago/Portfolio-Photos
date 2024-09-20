@@ -13,6 +13,7 @@ body {
   padding: 0;
   color: #fff;
   font-family: Arial, sans-serif;
+  font-size: 16px;
 }
 
 /* Stile per l'header */
@@ -29,6 +30,7 @@ body {
   align-items: center;
   z-index: 100;
   transition: top 0.3s;
+  text-align: center;
 }
 
 .logo {
@@ -38,9 +40,9 @@ body {
   font-weight: 600;
   text-decoration: none;
   margin-bottom: 5px;
-  margin-right: 40px;
   font-family: "Libre Baskerville", serif;
   font-weight: 400;
+  text-align: center;
 }
 
 .logo:hover {
@@ -53,7 +55,6 @@ body {
   font-size: 16px;
   letter-spacing: 8.5px;
   margin-top: 5px;
-  margin-left: -40px;
   font-family: "Outfit", sans-serif;
 }
 
@@ -82,6 +83,7 @@ body {
 
 .navbar .links a:hover {
   color: #fcbe6e;
+  transform: scale(1.07); /* Effetto zoom al passaggio del mouse */
 }
 
 /* Stile per la sezione home */
@@ -98,7 +100,10 @@ body {
   animation: fadeIn 3s ease-in-out forwards;
   transition: background-image 1s ease-in-out;
 }
-
+img {
+  max-width: 100%;
+  height: auto;
+}
 .home-text {
   position: absolute;
   color: white;
@@ -130,6 +135,23 @@ body {
   background-color: rgba(0, 0, 0, 0.194);
   z-index: 0;
 }
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 200px; /* Spazio prima del testo della sezione */
+  padding-bottom: 80px; /* Spazio dopo il testo della sezione */
+  background-color: #202020; /* Sfondo scuro */
+}
+.contact h1 {
+  font-size: 30px;
+  color: #fcbe6e;
+  margin-bottom: 10px;
+  letter-spacing: 3px;
+  font-family: "Libre Baskerville", serif;
+}
 
 @keyframes fadeIn {
   0% {
@@ -142,17 +164,18 @@ body {
 
 /* Stile per la sezione photos */
 .photos {
-  height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  position: relative;
+  padding-top: 200px; /* Spazio prima del testo della sezione */
+  padding-bottom: 80px; /* Spazio dopo il testo della sezione */
+  background-color: #202020; /* Sfondo scuro */
 }
 
 .photos .home-text {
-  max-width: 200px;
-  margin-bottom: 390px;
+  margin-top: -595px;
   font-family: "Libre Baskerville", serif;
 }
 
@@ -165,7 +188,9 @@ body {
 }
 
 .photos p {
-  font-size: 90%;
+  font-size: 15px;
+  margin-top: 10px;
+  font-family: "Outfit", sans-serif;
 }
 .about {
   height: 100vh;
@@ -177,7 +202,7 @@ body {
 }
 .about .home-text {
   max-width: 200px;
-  margin-bottom: 320px;
+  margin-bottom: 380px;
 }
 
 .about h1 {
@@ -187,6 +212,165 @@ body {
   letter-spacing: 3px;
   font-family: "Libre Baskerville", serif;
 }
+.about .home-text p {
+  font-family: "Outfit", sans-serif;
+  font-size: 19px;
+}
+.portfolio-section {
+  padding: 60px 20px;
+  background-color: #f4f4f4;
+}
+
+.portfolio-section h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 80%; /* Mantiene la galleria centrata */
+  margin-top: 20px;
+}
+.gallery-item {
+  flex: 1 1 calc(30% - 80px); /* Riduce lo spazio tra le immagini per ingrandirle */
+  margin-bottom: 20px;
+}
+.gallery-item:hover {
+  transform: scale(1.05); /* Effetto zoom al passaggio del mouse */
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Mantiene le proporzioni dell'immagine riempiendo l'area */
+  display: block;
+  border-radius: 10px;
+}
+
+.carousel-section {
+  padding: 60px 20px;
+  background-color: #cdcaca;
+  text-align: center;
+  color: #6f6e6d;
+}
+.carousel {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: fit-content;
+}
+
+.carousel-inner img {
+  width: 260px;
+  height: 190px;
+  object-fit: cover;
+  margin: 0 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.carousel-inner img:hover {
+  transform: scale(1.07); /* Effetto zoom al passaggio del mouse */
+}
+/* FOOTER */
+.footer {
+  padding: 80px;
+  background-color: #575656;
+  color: #eeecec;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer__nav-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-right: 30px;
+}
+
+.footer__nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 2rem;
+}
+
+.footer__item {
+  margin-right: 1rem;
+}
+
+.footer__link {
+  font-size: 1.2rem;
+  color: #eeecec;
+  text-decoration: none;
+  font-family: "Josefin Sans", sans-serif;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.footer__link:hover {
+  color: #fcbe6e;
+  transform: scale(1.07);
+}
+
+.footer__contact {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+.footer__contact p {
+  margin: 0.5rem 0;
+}
+
+.footer__contact a {
+  color: #fcbe6e;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.footer__contact a:hover {
+  text-decoration: underline;
+}
+
+.footer__logo-section {
+  text-align: center;
+  flex-grow: 4;
+  margin-right: 30%;
+}
+
+.footer__logo {
+  height: 5rem;
+  display: block;
+  margin: 0 auto;
+}
+
+.footer__copyright {
+  font-size: 1rem;
+  color: #cacaca;
+  margin-top: 10px;
+  text-align: center;
+}
+.bx-flip-horizontal {
+  font-size: 30px;
+}
+
 /*MEDIA PER SCHERMI PICCOLI */
 @media (max-width: 768px) {
   .logo {
@@ -271,5 +455,53 @@ body {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.194);
     z-index: 0;
+  }
+  .gallery-item {
+    flex: 1 1 calc(50% - 40px);
+  }
+  body {
+    font-size: 14px;
+  }
+  .footer__container {
+    flex-direction: column; /* Cambia il layout da orizzontale a verticale */
+    align-items: center; /* Centra gli elementi */
+    text-align: center;
+  }
+
+  .footer__contact {
+    order: 1; /* Mostra la sezione contatti per prima */
+    margin-bottom: 20px; /* Spazio sotto la sezione contatti */
+  }
+
+  .footer__logo-section {
+    order: 2; /* Mostra la sezione logo dopo i contatti */
+    margin-bottom: 20px; /* Spazio sotto la sezione logo */
+  }
+
+  .footer__nav-section {
+    order: 3; /* La sezione di navigazione sarà l'ultima */
+    margin-bottom: 20px;
+  }
+
+  .footer__copyright {
+    order: 4; /* Posiziona il copyright per ultimo */
+    margin-bottom: 10px; /* Riduzione margine */
+  }
+
+  .footer__link {
+    font-size: 1rem; /* Riduci leggermente la dimensione del font per schermi piccoli */
+  }
+
+  .footer__contact i {
+    font-size: 24px; /* Ridimensiona le icone per schermi piccoli */
+  }
+}
+@media (max-width: 600px) {
+  .logo {
+    font-size: 20px;
+  }
+
+  .navbar .links a {
+    font-size: 14px;
   }
 }
