@@ -175,7 +175,7 @@ img {
 }
 
 .photos .home-text {
-  margin-top: -595px;
+  margin-top: -710px;
   font-family: "Libre Baskerville", serif;
 }
 
@@ -202,7 +202,7 @@ img {
 }
 .about .home-text {
   max-width: 200px;
-  margin-bottom: 380px;
+  margin-bottom: 120px;
 }
 
 .about h1 {
@@ -250,18 +250,46 @@ img {
   display: block;
   border-radius: 10px;
 }
-
+.image-grid-section {
+  padding: 120px;
+  text-align: center;
+}
+.image-grid-section h2 {
+  margin-bottom: 30px;
+  color: #fcbe6e;
+  font-family: "Libre Baskerville", serif;
+}
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 2fr));
+  gap: 20px;
+  grid-auto-rows: 400px;
+}
 .carousel-section {
-  padding: 60px 20px;
-  background-color: #cdcaca;
+  padding: 190px 100px;
+  position: relative;
   text-align: center;
   color: #6f6e6d;
 }
-.carousel {
+.grid-item {
+  position: relative;
+  overflow: hidden;
+}
+.grid-item img {
   width: 100%;
-  display: flex;
-  justify-content: center;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.grid-item img:hover {
+  transform: scale(1.05); /* Effetto zoom al passaggio del mouse */
+}
+
+.carousel {
+  width: 80%;
+  overflow: hidden; /* Nascondere le immagini fuori dalla vista */
   margin: 0 auto;
+  position: relative;
 }
 .carousel-inner {
   display: flex;
@@ -280,9 +308,29 @@ img {
 .carousel-inner img:hover {
   transform: scale(1.07); /* Effetto zoom al passaggio del mouse */
 }
+
+.carousel-section-2 {
+  padding: 60px 20px;
+  background-color: #cdcaca;
+  text-align: center;
+  color: #6f6e6d;
+  margin-top: 100px;
+}
+.box-photo-me {
+  flex: 4; /* L'immagine occuperà lo spazio necessario */
+  max-width: 100% !important;
+  margin-top: 40%;
+}
+
+.img-photo-me {
+  width: 100%; /* L'immagine si adatta al box */
+  height: auto;
+  border-radius: 10px; /* Aggiunge angoli arrotondati all'immagine */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Aggiunge un'ombra leggera */
+}
 /* FOOTER */
 .footer {
-  padding: 80px;
+  padding: 190px;
   background-color: #575656;
   color: #eeecec;
 }
@@ -356,7 +404,7 @@ img {
 }
 
 .footer__logo {
-  height: 5rem;
+  height: 10rem;
   display: block;
   margin: 0 auto;
 }
@@ -505,3 +553,4 @@ img {
     font-size: 14px;
   }
 }
+
