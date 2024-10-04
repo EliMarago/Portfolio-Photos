@@ -145,6 +145,7 @@ img {
   padding-bottom: 80px; /* Spazio dopo il testo della sezione */
   background-color: #202020; /* Sfondo scuro */
 }
+
 .contact h1 {
   font-size: 30px;
   color: #fcbe6e;
@@ -175,7 +176,7 @@ img {
 }
 
 .photos .home-text {
-  margin-top: -710px;
+  margin-top: -630px;
   font-family: "Libre Baskerville", serif;
 }
 
@@ -200,10 +201,6 @@ img {
   text-align: center;
   position: relative;
 }
-.about .home-text {
-  max-width: 200px;
-  margin-bottom: 120px;
-}
 
 .about h1 {
   font-size: 30px;
@@ -211,10 +208,62 @@ img {
   margin-bottom: 10px;
   letter-spacing: 3px;
   font-family: "Libre Baskerville", serif;
+  margin-top: -410px;
 }
-.about .home-text p {
+
+.text-content {
+  max-width: 55%; /* Il testo occupa il 55% dello spazio disponibile */
+}
+.text-content h1 {
+  font-size: 30px;
+  color: #fcbe6e;
+  margin-bottom: 10px;
+  letter-spacing: 3px;
+  font-family: "Libre Baskerville", serif;
+  text-align: center; /* Centra il titolo */
+}
+
+.text-content p {
   font-family: "Outfit", sans-serif;
   font-size: 19px;
+  margin-bottom: 10px;
+  line-height: 1.5; /* Aggiungi una migliore leggibilità con interlinea */
+  float: left;
+  margin-top: 20%;
+  margin-right: 60px; /* Aggiunge spazio tra il testo e l'immagine */
+  margin-left: 20%;
+}
+
+.box-photo-me {
+  max-width: 40%; /* L'immagine occupa il 40% dello spazio */
+  display: flex;
+  right: 100px;
+}
+
+.img-photo-me {
+  height: 380px;
+  width: 290px;
+  margin-right: 150px;
+  float: right;
+  margin-top: 30px;
+  border-radius: 15px;
+}
+
+@media (max-width: 768px) {
+  .home-text {
+    flex-direction: column; /* Su schermi più piccoli, testo e immagine si dispongono verticalmente */
+    text-align: center;
+  }
+
+  .text-content,
+  .box-photo-me {
+    max-width: 90%; /* Gli elementi si estendono al 100% della larghezza disponibile su dispositivi mobili */
+  }
+
+  .img-photo-me {
+    height: 150px; /* Riduce leggermente l'immagine su schermi piccoli */
+    width: 150px;
+  }
 }
 .portfolio-section {
   padding: 60px 20px;
@@ -237,7 +286,7 @@ img {
 }
 .gallery-item {
   flex: 1 1 calc(30% - 80px); /* Riduce lo spazio tra le immagini per ingrandirle */
-  margin-bottom: 20px;
+  margin-top: 60px;
 }
 .gallery-item:hover {
   transform: scale(1.05); /* Effetto zoom al passaggio del mouse */
@@ -258,6 +307,7 @@ img {
   margin-bottom: 30px;
   color: #fcbe6e;
   font-family: "Libre Baskerville", serif;
+  letter-spacing: 4px;
 }
 .image-grid {
   display: grid;
@@ -316,21 +366,10 @@ img {
   color: #6f6e6d;
   margin-top: 100px;
 }
-.box-photo-me {
-  flex: 4; /* L'immagine occuperà lo spazio necessario */
-  max-width: 100% !important;
-  margin-top: 40%;
-}
 
-.img-photo-me {
-  width: 100%; /* L'immagine si adatta al box */
-  height: auto;
-  border-radius: 10px; /* Aggiunge angoli arrotondati all'immagine */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Aggiunge un'ombra leggera */
-}
 /* FOOTER */
 .footer {
-  padding: 190px;
+  padding: 50px 20px;
   background-color: #575656;
   color: #eeecec;
 }
@@ -350,6 +389,8 @@ img {
   justify-content: center;
   align-items: flex-start;
   margin-right: 30px;
+  text-align: center;
+  flex-grow: 1;
 }
 
 .footer__nav {
@@ -395,14 +436,18 @@ img {
 
 .footer__contact a:hover {
   text-decoration: underline;
+  color: #f4f4f4;
 }
 
 .footer__logo-section {
   text-align: center;
-  flex-grow: 4;
-  margin-right: 30%;
+  flex-grow: 1;
 }
 
+.account-ig {
+  margin-right: 140px;
+  margin-bottom: 10px;
+}
 .footer__logo {
   height: 10rem;
   display: block;
@@ -511,37 +556,28 @@ img {
     font-size: 14px;
   }
   .footer__container {
-    flex-direction: column; /* Cambia il layout da orizzontale a verticale */
-    align-items: center; /* Centra gli elementi */
+    flex-direction: column;
+    align-items: center;
     text-align: center;
   }
 
   .footer__contact {
-    order: 1; /* Mostra la sezione contatti per prima */
-    margin-bottom: 20px; /* Spazio sotto la sezione contatti */
+    margin-top: 1rem;
+    font-size: 1rem;
   }
 
   .footer__logo-section {
     order: 2; /* Mostra la sezione logo dopo i contatti */
-    margin-bottom: 20px; /* Spazio sotto la sezione logo */
+    margin-top: 70px; /* Spazio sotto la sezione logo */
   }
-
   .footer__nav-section {
-    order: 3; /* La sezione di navigazione sarà l'ultima */
-    margin-bottom: 20px;
+    margin-right: 0;
+    align-items: center;
+    text-align: center;
   }
-
-  .footer__copyright {
-    order: 4; /* Posiziona il copyright per ultimo */
-    margin-bottom: 10px; /* Riduzione margine */
-  }
-
-  .footer__link {
-    font-size: 1rem; /* Riduci leggermente la dimensione del font per schermi piccoli */
-  }
-
-  .footer__contact i {
-    font-size: 24px; /* Ridimensiona le icone per schermi piccoli */
+  .account-ig {
+    margin-right: 50px;
+    margin-bottom: 10px;
   }
 }
 @media (max-width: 600px) {
@@ -551,6 +587,100 @@ img {
 
   .navbar .links a {
     font-size: 14px;
+  }
+}
+/* Per schermi medi (fino a 768px) */
+@media (max-width: 768px) {
+  html {
+    font-size: 38%;
+  }
+
+  .header {
+    height: 15%;
+    padding: 1rem 3%;
+  }
+
+  .navbar .links a {
+    font-size: 14px;
+  }
+
+  .footer__container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer__logo-section {
+    order: 2;
+    margin-top: 50px;
+  }
+
+  .footer__contact {
+    font-size: 0.9rem;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .footer__nav-section {
+    margin-right: 0;
+  }
+
+  .footer__logo {
+    height: 8rem;
+  }
+}
+
+/* Per schermi piccoli (fino a 600px) */
+@media (max-width: 600px) {
+  .header {
+    height: auto;
+  }
+
+  .navbar .links a {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .home-text h1 {
+    font-size: 30px;
+  }
+
+  .home-text p {
+    font-size: 16px;
+  }
+
+  .about h1,
+  .photos h1,
+  .contact h1 {
+    font-size: 24px;
+  }
+
+  .text-content p {
+    font-size: 14px;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+    float: none;
+  }
+
+  .img-photo-me {
+    height: 180px;
+    width: 140px;
+    margin: 0 auto;
+  }
+
+  .gallery-item {
+    flex: 1 1 calc(100% - 20px);
+    margin-top: 30px;
+  }
+
+  .footer__logo {
+    height: 6rem;
+  }
+
+  .footer__contact a {
+    padding: 5px;
+    font-size: 0.9rem;
   }
 }
 
