@@ -447,7 +447,7 @@ img {
 }
 
 /*MEDIA PER SCHERMI PICCOLI */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   body {
     background-color: rgb(32, 31, 31);
     height: 100%;
@@ -567,6 +567,9 @@ img {
     height: 100vh;
     padding: 20%;
     margin-top: 30px;
+    padding-top: calc(
+      20% + 60px
+    ); /* Aggiunge spazio in base all'altezza dell'header fisso */
   }
   .footer__container {
     flex-direction: column;
