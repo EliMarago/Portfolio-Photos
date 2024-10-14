@@ -5,7 +5,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Playpen+Sans:wght@100..800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Playpen+Sans:wght@100..800&display=swap");
 
-/* Stili generali */
 body {
   background-color: rgb(32, 31, 31);
   height: 100%;
@@ -100,10 +99,10 @@ body {
   animation: fadeIn 3s ease-in-out forwards;
   transition: background-image 1s ease-in-out;
 }
+
 img {
   max-width: 100%;
   height: auto;
-  display: block;
 }
 .home-text {
   position: absolute;
@@ -111,6 +110,7 @@ img {
   text-align: center;
   z-index: 1;
   font-family: "Libre Baskerville", serif;
+  margin-top: 20%;
 }
 
 .home-text h1 {
@@ -122,7 +122,7 @@ img {
 .home-text p {
   font-size: 20px;
   font-style: normal;
-  margin-bottom: 45%;
+  margin-bottom: 40%;
   font-family: "Outfit", sans-serif;
 }
 
@@ -408,6 +408,7 @@ img {
   display: flex;
   align-items: center; /* Allinea verticalmente le icone e i link */
   gap: 14px; /* Spazio tra le icone e i link */
+  margin-bottom: 390px;
 }
 
 .footer__contact i {
@@ -444,6 +445,135 @@ img {
 }
 .bx-flip-horizontal {
   font-size: 30px;
+}
+
+/* Adattamenti per schermi più piccoli, come telefoni */
+@media (max-width: 768px) {
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 13%;
+    padding: 1rem 6%;
+    background-color: rgba(107, 105, 105, 0.676);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 100;
+    transition: top 0.3s;
+  }
+
+  .logo {
+    color: #cdcaca;
+    font-size: 26px;
+    letter-spacing: 4px;
+    font-weight: 600;
+    text-decoration: none;
+    margin-bottom: 10px;
+    margin-right: 48px;
+    font-family: "Libre Baskerville", serif;
+    font-weight: 400;
+  }
+
+  .subtitle {
+    font-size: 14px;
+    letter-spacing: 6px;
+  }
+
+  .navbar .links {
+    gap: 10px;
+  }
+
+  .home-text h1 {
+    font-size: 32px;
+    font-weight: bold;
+    font-family: "Outfit", sans-serif;
+    margin-bottom: 19px;
+  }
+
+  .home-text p {
+    font-size: 16px; /* Riduci la dimensione del paragrafo */
+    margin-bottom: 20%; /* Riduci lo spazio tra il testo */
+  }
+
+  .about {
+    flex-direction: column; /* Disposizione verticale */
+    padding: 20px;
+    height: auto;
+  }
+
+  .text-content {
+    max-width: 90%; /* Riduci la larghezza del testo */
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .box-photo-me {
+    max-width: 90%;
+    margin-top: 20px;
+    justify-content: center;
+  }
+
+  .img-photo-me {
+    height: auto;
+    width: 90%; /* Riduci la dimensione dell'immagine */
+    margin-right: 0;
+  }
+
+  /* Galleria immagini */
+
+  .gallery-item {
+    flex: 1 1 100%; /* Ogni immagine occupa l'intera larghezza */
+  }
+
+  /* Carousel */
+  .carousel {
+    width: 100%;
+  }
+
+  .carousel-inner img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Footer */
+  .footer__container {
+    text-align: center;
+  }
+
+  .footer__contact {
+    margin-bottom: 0;
+  }
+}
+
+/* Adattamenti per schermi molto piccoli (come telefoni di vecchia generazione) */
+@media (max-width: 480px) {
+  .header {
+    padding: 0.5rem;
+  }
+
+  .logo {
+    font-size: 20px; /* Riduci ulteriormente il logo */
+  }
+
+  .navbar .links a {
+    font-size: 14px; /* Riduci la dimensione dei link della navbar */
+    padding: 8px;
+  }
+
+  .home-text h1 {
+    font-size: 22px; /* Riduci la dimensione del titolo */
+  }
+
+  .home-text p {
+    font-size: 14px;
+  }
+
+  .text-content p {
+    font-size: 16px;
+    margin-top: 10px;
+  }
 }
 
 
