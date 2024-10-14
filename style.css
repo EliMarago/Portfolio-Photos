@@ -447,8 +447,33 @@ img {
   font-size: 30px;
 }
 
-/* Adattamenti per schermi più piccoli, come telefoni */
+
+/*MEDIA PER SCHERMI PICCOLI */
 @media (max-width: 768px) {
+  body {
+    background-color: rgb(32, 31, 31);
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+  }
+  .text-content,
+  .box-photo-me {
+    max-width: 80%; /* Gli elementi si estendono al 100% della larghezza disponibile su dispositivi mobili */
+  }
+  .logo {
+    color: #cdcaca;
+    font-size: 26px;
+    letter-spacing: 4px;
+    font-weight: 600;
+    text-decoration: none;
+    margin-bottom: 10px;
+    margin-right: 48px;
+    font-family: "Libre Baskerville", serif;
+    font-weight: 400;
+  }
   .header {
     position: fixed;
     top: 0;
@@ -463,26 +488,32 @@ img {
     z-index: 100;
     transition: top 0.3s;
   }
-
-  .logo {
-    color: #cdcaca;
-    font-size: 26px;
-    letter-spacing: 4px;
-    font-weight: 600;
-    text-decoration: none;
-    margin-bottom: 10px;
-    margin-right: 48px;
-    font-family: "Libre Baskerville", serif;
-    font-weight: 400;
-  }
-
   .subtitle {
-    font-size: 14px;
-    letter-spacing: 6px;
+    text-align: center;
+    color: rgba(238, 177, 79, 0.772);
+    font-size: 16px;
+    letter-spacing: 8.5px;
+    margin-top: 5px;
+    margin-right: 16%;
+    font-family: "Outfit", sans-serif;
   }
-
-  .navbar .links {
-    gap: 10px;
+  .navbar .links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    padding: 12px;
+    transition: color 0.3s ease;
+    margin-top: -15px;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 800;
+  }
+  .home-text {
+    position: absolute;
+    flex-direction: column; /* Su schermi più piccoli, testo e immagine si dispongono verticalmente */
+    color: white;
+    text-align: center;
+    z-index: 1;
+    font-family: "Libre Baskerville", serif;
   }
 
   .home-text h1 {
@@ -491,91 +522,100 @@ img {
     font-family: "Outfit", sans-serif;
     margin-bottom: 19px;
   }
-
   .home-text p {
-    font-size: 16px; /* Riduci la dimensione del paragrafo */
-    margin-bottom: 20%; /* Riduci lo spazio tra il testo */
+    font-size: 20px;
+    font-style: normal;
+    margin-bottom: 45%;
+    font-family: "Outfit", sans-serif;
   }
-
-  .about {
-    flex-direction: column; /* Disposizione verticale */
-    padding: 20px;
-    height: auto;
-  }
-
-  .text-content {
-    max-width: 90%; /* Riduci la larghezza del testo */
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  .box-photo-me {
-    max-width: 90%;
-    margin-top: 20px;
+  .home {
+    position: relative;
+    display: flex;
     justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    height: 100vh;
+    padding: 5%;
+    background: url(./img/IMG_8216-2.jpg) no-repeat center center/cover;
+    background-size: cover;
+    animation: fadeIn 3s ease-in-out forwards;
+    transition: background-image 1s ease-in-out;
   }
-
-  .img-photo-me {
-    height: auto;
-    width: 90%; /* Riduci la dimensione dell'immagine */
-    margin-right: 0;
+  .home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.194);
+    z-index: 0;
   }
-
-  /* Galleria immagini */
-
   .gallery-item {
-    flex: 1 1 100%; /* Ogni immagine occupa l'intera larghezza */
+    flex: 1 1 40%; /* Ogni elemento occupa l'intera larghezza */
+    margin-bottom: 10px;
   }
-
-  /* Carousel */
-  .carousel {
+  .photos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 200px; /* Spazio prima del testo della sezione */
+    padding-bottom: 80px; /* Spazio dopo il testo della sezione */
+    background-color: #202020; /* Sfondo scuro */
     width: 100%;
+    height: 100vh;
+    padding: 20%;
+    margin-top: 10px;
+    padding-top: calc(
+      30% + 80px
+    ); /* Aggiunge spazio in base all'altezza dell'header fisso */
   }
-
-  .carousel-inner img {
-    width: 100%;
-    height: auto;
-  }
-
-  /* Footer */
   .footer__container {
+    flex-direction: column;
+    align-items: center;
     text-align: center;
   }
 
   .footer__contact {
-    margin-bottom: 0;
+    margin-top: 3rem;
+    font-size: 1rem;
+    margin-left: 120px;
+    margin-bottom: 100px;
+  }
+  .footer__logo-section {
+    order: 2; /* Mostra la sezione logo dopo i contatti */
+    margin-top: 70px; /* Spazio sotto la sezione logo */
+  }
+  .footer__nav-section {
+    margin-right: 0;
+    align-items: center;
+    text-align: center;
+  }
+  .footer {
+    width: 100%;
+    height: 40vh;
+    padding: 20%;
   }
 }
 
-/* Adattamenti per schermi molto piccoli (come telefoni di vecchia generazione) */
+/*---- ---- ----- */
 @media (max-width: 480px) {
-  .header {
-    padding: 0.5rem;
-  }
-
-  .logo {
-    font-size: 20px; /* Riduci ulteriormente il logo */
-  }
-
-  .navbar .links a {
-    font-size: 14px; /* Riduci la dimensione dei link della navbar */
-    padding: 8px;
+  .home {
+    padding: 20%;
   }
 
   .home-text h1 {
-    font-size: 22px; /* Riduci la dimensione del titolo */
+    font-size: 32px;
   }
 
-  .home-text p {
-    font-size: 14px;
+  .gallery-item {
+    flex: 1 1 40%;
   }
 
-  .text-content p {
-    font-size: 16px;
-    margin-top: 10px;
+  .footer__container {
+    flex-direction: column;
+    text-align: center;
   }
-}
-
-
-
-
+}  
