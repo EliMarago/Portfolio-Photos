@@ -618,3 +618,9 @@ img {
     text-align: center;
   }
 }  
+@media screen and (max-width: 800px) {
+  html {
+    flex: 80%;
+    max-width: 100%;
+  }
+}
