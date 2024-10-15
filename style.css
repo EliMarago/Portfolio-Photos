@@ -457,12 +457,18 @@ img {
     padding: 0;
     color: #fff;
     font-family: Arial, sans-serif;
+    max-width: 100vw;
+    overflow-x: hidden; /* Evita lo scorrimento orizzontale */
     font-size: 16px;
   }
   .text-content,
   .box-photo-me {
     max-width: 80%; /* Gli elementi si estendono al 100% della larghezza disponibile su dispositivi mobili */
   }
+  img {
+  max-width: 100%;
+  height: auto;
+}
   .logo {
     color: #cdcaca;
     font-size: 26px;
@@ -612,6 +618,10 @@ img {
   .gallery-item {
     flex: 1 1 40%;
   }
+  img {
+  max-width: 100%;
+  height: auto;
+}
 
   .footer__container {
     flex-direction: column;
@@ -623,4 +633,8 @@ img {
     flex: 80%;
     max-width: 100%;
   }
+  img {
+  max-width: 100%;
+  height: auto;
+}
 }
