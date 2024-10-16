@@ -603,6 +603,14 @@ img {
     height: 40vh;
     padding: 20%;
   }
+    .carousel-section-2 {
+    padding: 40px 90px; /* Riduci il padding per schermi piccoli */
+    width: 100%; /* Assicurati che la sezione occupi tutta la larghezza */
+    margin-top: 50px; /* Riduci lo spazio in alto */
+  }
+  .carousel {
+    width: 100%;
+  }
 }
 
 /*---- ---- ----- */
